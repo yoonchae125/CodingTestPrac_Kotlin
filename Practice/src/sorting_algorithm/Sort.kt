@@ -32,7 +32,7 @@ class Sort {
 
     fun bubbleSort(list: IntArray) {
         for (i in list.indices) {
-            for (j in 0 until list.lastIndex) {
+            for (j in 0 until list.lastIndex-i) {
                 if (list[j] > list[j + 1]) {
                     val temp = list[j]
                     list[j] = list[j + 1]
@@ -49,58 +49,57 @@ class Sort {
         val sorted = IntArray(list.size)
         while (i <= mid && j <= right) {
             if (list[i] < list[j]) {
-                sorted[k] = list[i]
-                i++
+                sorted[k++] = list[i++]
             } else {
-                sorted[k] = list[j]
-                j++
+                sorted[k++] = list[j++]
             }
-            k++
         }
         while (i <= mid) {
-            sorted[k] = list[i]
-            i++
-            k++
+            sorted[k++] = list[i++]
         }
         while (j <= right) {
-            sorted[k] = list[j]
-            j++
-            k++
+            sorted[k++] = list[j++]
         }
         for (i in left..right) {
             list[i] = sorted[i]
         }
     }
 
-    fun mergeSort(list: IntArray, left: Int, right: Int) {
+    fun mergeSortTopDown(list: IntArray, left: Int, right: Int) {
         var mid: Int
         if (left < right) {
             mid = (left + right) / 2
-            mergeSort(list, left, mid)
-            mergeSort(list, mid + 1, right)
+            mergeSortTopDown(list, left, mid)
+            mergeSortTopDown(list, mid + 1, right)
             merge(list, left, mid, right)
         }
     }
 
-    fun quickSort(list: IntArray, left: Int, right: Int) {
-        var pivot :Int
-        var i:Int
-        var j:Int
-        if (left < right) {
-            i = left
-            j = right
-            pivot = list[left]
-            while(i<j){
-                while (i<=left && list[i] < pivot) i++
-                while (i < j && list[j] > pivot) j--
 
+    fun partition(list: IntArray, left: Int, right: Int): Int {
+        val pivot = list[left]
+        var i = left
+        var j = right
+        while (i < j) {
+            while (list[i] < pivot && i < j)
+                i++
+            while (list[j] > pivot && i < j)
+                j--
+            if (i < j) {
                 val temp = list[i]
                 list[i] = list[j]
-                list[j] = list[i]
+                list[j] = temp
             }
-            quickSort(list, left, i)
-            quickSort(list, i+1, right)
         }
+        return i
+    }
+    fun quickSort(list: IntArray, left: Int, right: Int) {
+        if (left < right) {
+            val pivotNewIndex = partition(list, left, right);
+            quickSort(list, left, pivotNewIndex - 1);
+            quickSort(list, pivotNewIndex + 1, right);
+        }
+
     }
 }
 
@@ -109,22 +108,27 @@ fun main(args: Array<String>) {
     val sort = Sort()
 
     sort.selectionSort(list)
+    print("Selection Sort: ")
     printList(list)
 
     list = intArrayOf(9, 6, 7, 8, 5)
     sort.insertionSort(list)
+    print("Insertion Sort: ")
     printList(list)
 
     list = intArrayOf(9, 6, 7, 8, 5)
     sort.bubbleSort(list)
+    print("Bubble Sort: ")
     printList(list)
 
     list = intArrayOf(9, 6, 7, 8, 5)
-    sort.mergeSort(list, 0, list.lastIndex)
+    sort.mergeSortTopDown(list, 0, list.lastIndex)
+    print("Merge Sort: ")
     printList(list)
 
     list = intArrayOf(9, 6, 7, 8, 5)
     sort.quickSort(list, 0, list.lastIndex)
+    print("Quick Sort: ")
     printList(list)
 
 }
