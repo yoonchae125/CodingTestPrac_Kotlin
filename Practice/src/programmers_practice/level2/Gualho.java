@@ -10,23 +10,26 @@ public class Gualho {
         if(p.isEmpty()){
             return p;
         }
+//        System.out.println(isBalanced("("));
         answer = go(p);
         return answer;
     }
     public String go(String p){
-        int idx = 1;
+        System.out.println("p "+p);
+        int idx;
         String u = "";
         String v = "";
-        for(idx = 1;idx<p.length();idx+=2){
+        for(idx = 2;idx<=p.length();idx+=2){
             u = p.substring(0,idx);
+//            System.out.println(u);
             if(isBalanced(u)){
-//                System.out.println(idx);
+                System.out.println(idx);
                 v = p.substring(idx);
                 break;
             }
-            idx++;
         }
-//        System.out.println(u+","+v);
+//        ()(())()
+        System.out.println(u+","+v);
         if(isRight(u)){
             if(v.isEmpty()){
                 return u;
@@ -34,8 +37,11 @@ public class Gualho {
             return u+go(v);
         }else{
             String nu = u.substring(1,u.length()-1);
-            if(v.isEmpty())
-                return "()"+reverse(nu);
+            if(v.isEmpty()) {
+                System.out.println("1"+"()"+reverse(nu));
+                return "()" + reverse(nu);
+            }
+            System.out.println("2"+"("+go(v)+")"+reverse(nu));
             return "("+go(v)+")"+reverse(nu);
         }
     }
@@ -68,6 +74,7 @@ public class Gualho {
         return result;
     }
     boolean isRight(String str){
+//        System.out.println(str);
         boolean result = true;
         if(str.charAt(0)==')')
             return false;

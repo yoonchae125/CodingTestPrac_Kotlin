@@ -46,6 +46,21 @@ fun main(args:Array<String>){
 //    val num10 = BigNumber().solution("1924",2)
 //    println(num10)
 
-    val num11 = Gualho().solution("(()())()")
-    println(num11)
+//    val num11 = Gualho().solution("()(())()")
+//    println(num11)
+
+//    val scoville = intArrayOf(1, 2, 3, 9, 10, 12)
+//    val num12 = Hotter().solution(scoville,7)
+//    println(num12)
+
+//    val numbers = intArrayOf(3, 30, 34, 5, 9)
+//    val num13 = BiggestNumber().solution(numbers)
+//    println(num13)
+
+//    val num14 = FindPrime().solution("333")
+//    println(num14)
+
+    val citizens = intArrayOf(22, 42)
+    val num15 = HIndex().solution(citizens)
+    println(num15)
 }
