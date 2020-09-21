@@ -116,6 +116,19 @@ fun main(args: Array<String>) {
 //    val num28 = MakeMin().solution(a, b)
 //    println(num28)
 
-    val num20 = Fibonacci().solution(3)
-    println(num20)
+//    val num29 = Fibonacci().solution(3)
+//    println(num29)
+
+//    val num30 = SusikMax().solution("100+20")
+//    println(num30)
+
+//    val num31 = JadenCase().solution("3people    unFollowed me")
+//    println(num31)
+
+//    val nums = intArrayOf(2,6,8,14)
+//    val num32 = LCM().solution(nums)
+//    println(num32)
+
+    val num33 = RemovePair().solution("baabaa");
+    println(num33)
 }
