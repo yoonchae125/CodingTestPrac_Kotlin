@@ -71,6 +71,20 @@ public class Zip {
         return a;
     }
 
+    public static boolean is_prime(int x) { // 소수?
+        if (x <= 1) {
+            return false;
+        } else if (x == 2) {
+            return true;
+        }
+        for (int i=2; i*i <= x; i++) {
+            if (x % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         int[][] a = {{1, 2}, {4, 3}};
         Zip zip = new Zip();
@@ -82,4 +96,5 @@ public class Zip {
             System.out.println();
         }
     }
+
 }

@@ -129,6 +129,13 @@ fun main(args: Array<String>) {
 //    val num32 = LCM().solution(nums)
 //    println(num32)
 
-    val num33 = RemovePair().solution("baabaa");
-    println(num33)
+//    val num33 = RemovePair().solution("baabaa");
+//    println(num33)
+
+//    val nums = intArrayOf(1,2,3,4)
+//    val num34 = MakeDecimal().solution(nums)
+//    println(num34)
+
+    val num35 = JumpAndWarp().solution(5)
+    println(num35)
 }
