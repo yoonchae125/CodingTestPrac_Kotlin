@@ -136,6 +136,35 @@ fun main(args: Array<String>) {
 //    val num34 = MakeDecimal().solution(nums)
 //    println(num34)
 
-    val num35 = JumpAndWarp().solution(5)
-    println(num35)
+//    val num35 = JumpAndWarp().solution(5)
+//    println(num35)
+
+//    val words = arrayOf("tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank")
+//    val num36 = EnglishConnectWord().solution(3, words)
+//    printList(num36)
+
+//    val num37 = MatchTable().solution(8, 4, 7)
+//    println(num37)
+
+//    val num38 = NewsClustering().solution("aa1+aa2", "AAAA12")
+//    println(num38)
+
+//    val board = arrayOf("CCBDE", "AAADE", "AAABF", "CCBBF")
+//    val num39 = Friends4Block().solution(4, 5, board)
+//    println(num39)
+
+//    val cities = arrayOf("Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA")
+//    val num40 = Cache().solution(3, cities)
+//    println(num40)
+
+//    val musicinfos = arrayOf("03:00,03:03,FOO,CCB#CCB", "04:00,04:08,BAR,ABC")
+//    val num41 = WhatIsMusicNow().solution("CCB",musicinfos)
+//    println(num41)
+
+//    val num42 = AppCuck().solution("KAKAO");
+//    printList(num42)
+
+    val fileName = arrayOf("img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG")
+    val num43 = SaveFileName().solution(fileName)
+    printList(num43)
 }
