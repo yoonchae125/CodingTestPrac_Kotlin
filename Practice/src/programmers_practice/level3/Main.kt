@@ -30,23 +30,43 @@ fun main(args: Array<String>) {
 //    val num7 = Epkuksimsa().solution(6, times)
 //    println(num7)
 
-    val genres = arrayOf("classic", "pop", "classic", "classic", "pop")
-    val plays = intArrayOf(500, 600, 150, 800, 2500)
-    val num8 = BestAlbum().solution(genres, plays)
-    printList(num8)
+//    val genres = arrayOf("classic", "pop", "classic", "classic", "pop")
+//    val plays = intArrayOf(500, 600, 150, 800, 2500)
+//    val num8 = BestAlbum().solution(genres, plays)
+//    printList(num8)
+
+//    val puddles = arrayOf(intArrayOf(2, 2))
+//    val num9 = WayToSchool().solution(4, 3, puddles)
+//    println(num9)
+
+//    val tickets = arrayOf(arrayOf("ICN", "JFK"), arrayOf("HND", "IAD"), arrayOf("JFK", "HND"))
+//    val tickets = arrayOf(arrayOf("ICN", "A"), arrayOf("ICN", "B"), arrayOf("B", "ICN"))
+//    val tickets = arrayOf(arrayOf("ICN", "A"), arrayOf("A", "C"), arrayOf("A", "D"), arrayOf("D", "B"), arrayOf("B", "A"))
+//    val tickets = arrayOf(arrayOf("ICN", "SFO"), arrayOf("ICN", "ATL"), arrayOf("SFO", "ATL"),
+//            arrayOf("ATL", "ICN"), arrayOf("ATL","SFO"))
+//    val num10 = TravelPath().solution(tickets)
+//    printList(num10)
+
+    val costs = arrayOf(intArrayOf(0,1,1),intArrayOf(0,2,2),intArrayOf(1,2,5),
+            intArrayOf(1,3,1),intArrayOf(2,3,8))
+    val num11 = LinkIsland().solution(4, costs)
+    println(num11)
 }
+
 fun printList(list: IntArray) {
     list.forEach {
         print("$it ")
     }
     println()
 }
+
 fun printList(list: Array<String>) {
     list.forEach {
         print("$it ")
     }
     println()
 }
+
 fun printList(list: List<String>) {
     list.forEach {
         print("$it ")

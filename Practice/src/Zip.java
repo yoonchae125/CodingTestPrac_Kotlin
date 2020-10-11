@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Zip {
     public static boolean next_permutation(int[] a) { // 순열
         int i = a.length - 1;
@@ -85,6 +88,74 @@ public class Zip {
         return true;
     }
 
+    static class KruskalMST{
+        public static int solution(int n, int[][] costs){
+            int answer = 0;
+
+            Edge[] edges = new Edge[costs.length];
+
+            for(int i=0;i<costs.length;i++){
+                int[] cost = costs[i];
+                edges[i] = new Edge(cost[0], cost[1], cost[2]);
+            }
+
+            Arrays.sort(edges, new Comparator<Edge>() {
+                @Override
+                public int compare(Edge o1, Edge o2) {
+                    return o1.cost - o2.cost;
+                }
+            });
+
+            int parents[] = new int[n];
+            for(int i=0;i<n;i++){
+                parents[i] = i;
+            }
+
+            for(int i = 0;i<edges.length;i++){
+                if(!cycle(parents,edges[i].s,edges[i].e)) {
+                    answer+=edges[i].cost; // 총 소모비용
+                    union(parents,edges[i].s,edges[i].e);
+                    // 두 정점을 연결
+                }
+            }
+
+            return answer;
+        }
+        static int getParent(int arr[], int i){
+            if(arr[i] == i){
+                return i;
+            }
+            return arr[i] = getParent(arr, arr[i]);
+        }
+        static void union(int arr[], int a, int b){
+            int pa = getParent(arr, a);
+            int pb = getParent(arr, b);
+            if(pa < pb)
+                arr[pb] = pa;
+            else
+                arr[pa] = pb;
+
+        }
+        static boolean cycle(int arr[], int a, int b){
+            int pa = getParent(arr, a);
+            int pb = getParent(arr, b);
+
+            if(pa == pb)
+                return true;
+            else
+                return false;
+        }
+        static class Edge{
+            int s, e, cost;
+
+            Edge(int s, int e, int cost){
+                this.s = s;
+                this.e = e;
+                this.cost = cost;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int[][] a = {{1, 2}, {4, 3}};
         Zip zip = new Zip();
@@ -95,6 +166,12 @@ public class Zip {
             }
             System.out.println();
         }
+
+        KruskalMST mst = new KruskalMST();
+        int[][] costs = {{0,1,1},{0,2,2}, {1,2,5},
+                {1,3,1},{2,3,8}};
+        int sol = mst.solution(4, costs);
+        System.out.println(sol);
     }
 
 }
