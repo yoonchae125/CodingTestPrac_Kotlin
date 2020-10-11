@@ -18,9 +18,22 @@ fun main(args: Array<String>) {
 //    val num4 = IntTriangle().solution(triangle)
 //    println(num4)
 
-    val a = intArrayOf(9,-1,-5)
-    val num5 = Balloon().solution(a)
-    println(num5)
+//    val a = intArrayOf(9,-1,-5)
+//    val num5 = Balloon().solution(a)
+//    println(num5)
+
+//    val operations = arrayOf("I 7","I 5","I -5","D -1")
+//    val num6 = PriorityQueue().solution(operations)
+//    printList(num6)
+
+//    val times = intArrayOf(7,10)
+//    val num7 = Epkuksimsa().solution(6, times)
+//    println(num7)
+
+    val genres = arrayOf("classic", "pop", "classic", "classic", "pop")
+    val plays = intArrayOf(500, 600, 150, 800, 2500)
+    val num8 = BestAlbum().solution(genres, plays)
+    printList(num8)
 }
 fun printList(list: IntArray) {
     list.forEach {
