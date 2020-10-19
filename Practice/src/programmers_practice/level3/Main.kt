@@ -47,10 +47,18 @@ fun main(args: Array<String>) {
 //    val num10 = TravelPath().solution(tickets)
 //    printList(num10)
 
-    val costs = arrayOf(intArrayOf(0,1,1),intArrayOf(0,2,2),intArrayOf(1,2,5),
-            intArrayOf(1,3,1),intArrayOf(2,3,8))
-    val num11 = LinkIsland().solution(4, costs)
-    println(num11)
+//    val costs = arrayOf(intArrayOf(0,1,1),intArrayOf(0,2,2),intArrayOf(1,2,5),
+//            intArrayOf(1,3,1),intArrayOf(2,3,8))
+//    val num11 = LinkIsland().solution(4, costs)
+//    println(num11)
+
+//    val num12 = BestSet().solution(2,9)
+//    printList(num12)
+
+    val num13 = Hanoi().solution(3)
+    for(array in num13){
+        printList(array)
+    }
 }
 
 fun printList(list: IntArray) {
