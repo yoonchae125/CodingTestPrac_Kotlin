@@ -55,10 +55,15 @@ fun main(args: Array<String>) {
 //    val num12 = BestSet().solution(2,9)
 //    printList(num12)
 
-    val num13 = Hanoi().solution(3)
-    for(array in num13){
-        printList(array)
-    }
+//    val num13 = Hanoi().solution(3)
+//    for(array in num13){
+//        printList(array)
+//    }
+
+    val teamA = intArrayOf(5,1,3,7)
+    val teamB = intArrayOf(2,2,6,8)
+    val num14 = NumberGame().solution(teamA, teamB)
+    println(num14)
 }
 
 fun printList(list: IntArray) {
