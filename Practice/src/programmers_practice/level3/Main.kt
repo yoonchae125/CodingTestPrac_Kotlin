@@ -60,10 +60,14 @@ fun main(args: Array<String>) {
 //        printList(array)
 //    }
 
-    val teamA = intArrayOf(5,1,3,7)
-    val teamB = intArrayOf(2,2,6,8)
-    val num14 = NumberGame().solution(teamA, teamB)
-    println(num14)
+//    val teamA = intArrayOf(5,1,3,7)
+//    val teamB = intArrayOf(2,2,6,8)
+//    val num14 = NumberGame().solution(teamA, teamB)
+//    println(num14)
+
+    val computers = arrayOf(intArrayOf(1, 1, 0), intArrayOf(1, 1, 0), intArrayOf(0, 0, 1))
+    val num15 = Network().solution(3, computers)
+    println(num15)
 }
 
 fun printList(list: IntArray) {

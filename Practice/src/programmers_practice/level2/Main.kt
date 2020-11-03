@@ -164,7 +164,10 @@ fun main(args: Array<String>) {
 //    val num42 = AppCuck().solution("KAKAO");
 //    printList(num42)
 
-    val fileName = arrayOf("img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG")
-    val num43 = SaveFileName().solution(fileName)
-    printList(num43)
+//    val fileName = arrayOf("img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG")
+//    val num43 = SaveFileName().solution(fileName)
+//    printList(num43)
+
+    val num44 = Year2016().solution(5, 24)
+    println(num44)
 }

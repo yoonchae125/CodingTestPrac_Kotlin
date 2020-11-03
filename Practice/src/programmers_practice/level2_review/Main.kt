@@ -31,11 +31,14 @@ fun main(args: Array<String>) {
 //    val num7 = ShrinkString().solution("abcabcdede")
 //    println(num7)
 
-    val picture = arrayOf(intArrayOf(1, 1, 1, 0), intArrayOf(1, 2, 2, 0),
-            intArrayOf(1, 0, 0, 1), intArrayOf(0, 0, 0, 1),
-            intArrayOf(0, 0, 0, 3), intArrayOf(0, 0, 0, 3))
-    val num8 = ColoringBook().solution(6, 4, picture)
-    printList(num8)
+//    val picture = arrayOf(intArrayOf(1, 1, 1, 0), intArrayOf(1, 2, 2, 0),
+//            intArrayOf(1, 0, 0, 1), intArrayOf(0, 0, 0, 1),
+//            intArrayOf(0, 0, 0, 3), intArrayOf(0, 0, 0, 3))
+//    val num8 = ColoringBook().solution(6, 4, picture)
+//    printList(num8)
+
+    val num9 = TriangleSnail().solution(5)
+    printList(num9)
 }
 
 fun printList(list: IntArray) {
