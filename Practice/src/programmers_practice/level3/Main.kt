@@ -65,9 +65,13 @@ fun main(args: Array<String>) {
 //    val num14 = NumberGame().solution(teamA, teamB)
 //    println(num14)
 
-    val computers = arrayOf(intArrayOf(1, 1, 0), intArrayOf(1, 1, 0), intArrayOf(0, 0, 1))
-    val num15 = Network().solution(3, computers)
-    println(num15)
+//    val computers = arrayOf(intArrayOf(1, 1, 0), intArrayOf(1, 1, 0), intArrayOf(0, 0, 1))
+//    val num15 = Network().solution(3, computers)
+//    println(num15)
+
+    val cityMap = arrayOf(intArrayOf(0, 2, 0, 0, 0, 2), intArrayOf(0, 0, 2, 0, 1, 0), intArrayOf(1, 0, 0, 2, 2, 0))
+    val num16 = HeavenOfPedestrian().solution(3,6,cityMap)
+    println(num16)
 }
 
 fun printList(list: IntArray) {
