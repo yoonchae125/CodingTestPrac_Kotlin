@@ -69,9 +69,13 @@ fun main(args: Array<String>) {
 //    val num15 = Network().solution(3, computers)
 //    println(num15)
 
-    val cityMap = arrayOf(intArrayOf(0, 2, 0, 0, 0, 2), intArrayOf(0, 0, 2, 0, 1, 0), intArrayOf(1, 0, 0, 2, 2, 0))
-    val num16 = HeavenOfPedestrian().solution(3,6,cityMap)
-    println(num16)
+//    val cityMap = arrayOf(intArrayOf(0, 2, 0, 0, 0, 2), intArrayOf(0, 0, 2, 0, 1, 0), intArrayOf(1, 0, 0, 2, 2, 0))
+//    val num16 = HeavenOfPedestrian().solution(3,6,cityMap)
+//    println(num16)
+
+    val jobs = arrayOf(intArrayOf(0, 3), intArrayOf(1, 9), intArrayOf(2, 6))
+    val num17 = DiskController().solution(jobs)
+    println(num17)
 }
 
 fun printList(list: IntArray) {
