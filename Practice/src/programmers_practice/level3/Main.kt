@@ -73,9 +73,22 @@ fun main(args: Array<String>) {
 //    val num16 = HeavenOfPedestrian().solution(3,6,cityMap)
 //    println(num16)
 
-    val jobs = arrayOf(intArrayOf(0, 3), intArrayOf(1, 9), intArrayOf(2, 6))
-    val num17 = DiskController().solution(jobs)
-    println(num17)
+//    val jobs = arrayOf(intArrayOf(0, 3), intArrayOf(1, 9), intArrayOf(2, 6))
+//    val num17 = DiskController().solution(jobs)
+//    println(num17)
+
+//    val results = arrayOf(intArrayOf(4, 3), intArrayOf(4, 2), intArrayOf(3, 2),
+//            intArrayOf(1, 2), intArrayOf(2, 5))
+//    val num18 = Rank().solution(5, results)
+//    println(num18)
+
+//    val vertex  = arrayOf(intArrayOf(3, 6), intArrayOf(4, 3), intArrayOf(3, 2),
+//            intArrayOf(1, 3), intArrayOf(1, 2), intArrayOf(2, 4), intArrayOf(5, 2))
+//    val num19 = MostFarNode().solution(6, vertex)
+//    println(num19)
+
+    val num20 = LongestPalindrome().solution("abcdcba")
+    println(num20)
 }
 
 fun printList(list: IntArray) {
