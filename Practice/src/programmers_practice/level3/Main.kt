@@ -87,10 +87,42 @@ fun main(args: Array<String>) {
 //    val num19 = MostFarNode().solution(6, vertex)
 //    println(num19)
 
-    val num20 = LongestPalindrome().solution("abcdcba")
-    println(num20)
+//    val num20 = LongestPalindrome().solution("abcdcba")
+//    println(num20)
+
+//    val buildFrame = arrayOf(intArrayOf(1,0,0,1),intArrayOf(1,1,1,1),intArrayOf(2,1,0,1),
+//            intArrayOf(2,2,1,1),intArrayOf(5,0,0,1),intArrayOf(5,1,0,1),
+//            intArrayOf(4,2,1,1),intArrayOf(3,2,1,1))
+//    val buildFrame = arrayOf(intArrayOf(0,0,0,1),intArrayOf(2,0,0,1),intArrayOf(4,0,0,1),
+//            intArrayOf(0,1,1,1),intArrayOf(1,1,1,1),intArrayOf(2,1,1,1),intArrayOf(3,1,1,1),
+//            intArrayOf(2,0,0,0),intArrayOf(1,1,1,0),intArrayOf(2,2,0,1))
+//    val num21 = ColumnAndRow().solution(5, buildFrame)
+//    printList(num21)
+
+//    val money = intArrayOf(1,2,5)
+//    val num22 = Changes().solution(5, money)
+//    println(num22)
+
+//    val num23 = Jump().solution(4)
+//    println(num23)
+
+//    val num24 = LengthOfVisit().solution("UDU")
+//    println(num24)
+
+//    val works = intArrayOf(4, 3, 3)
+//    val num25 = OvertimeWork().solution(4, works)
+//    println(num25)
+
+    val num26 = LineUp().solution(3, 5)
+    printList(num26)
 }
 
+fun printList(list: Array<IntArray>) {
+    list.forEach {
+        printList(it)
+    }
+    println()
+}
 fun printList(list: IntArray) {
     list.forEach {
         print("$it ")
