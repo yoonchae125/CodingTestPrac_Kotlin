@@ -115,6 +115,13 @@ fun main(args: Array<String>) {
 
     val num26 = LineUp().solution(3, 5)
     printList(num26)
+
+//    val stones = intArrayOf(2, 4, 5, 3, 2, 1, 4, 1, 1, 1)
+//    val num27 = Bridge().solution(stones, 3)
+//    println(num27)
+
+//    val num28 = N_Queen().solution(4)
+//    println(num28)
 }
 
 fun printList(list: Array<IntArray>) {
