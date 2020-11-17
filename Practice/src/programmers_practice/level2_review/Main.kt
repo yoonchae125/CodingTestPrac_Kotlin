@@ -6,10 +6,10 @@ fun main(args: Array<String>) {
 //    val num1 = Country124().solution(4)
 //    println(num1)
 
-//    var skillTree = arrayOf("BACDE", "CBADF", "AECB", "BDA", "CXF", "ASF", "BDF", "CEFD")
-//    //                         x       o         o      x      o      o      x      x
-//    val num2 = SkillTree().solution("CBD", skillTree)
-//    println(num2)
+    var skillTree = arrayOf("BACDE", "CBADF", "AECB", "BDA", "CXF", "ASF", "BDF", "CEFD")
+    //                         x       o         o      x      o      o      x      x
+    val num2 = SkillTree2().solution("CBD", skillTree)
+    println(num2)
 
 //    val progresses = intArrayOf(93, 30, 55)
 //    val speeds = intArrayOf(1, 30, 5)
@@ -37,8 +37,9 @@ fun main(args: Array<String>) {
 //    val num8 = ColoringBook().solution(6, 4, picture)
 //    printList(num8)
 
-    val num9 = TriangleSnail().solution(5)
-    printList(num9)
+//    val num9 = TriangleSnail().solution(5)
+//    printList(num9)
+
 }
 
 fun printList(list: IntArray) {

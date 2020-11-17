@@ -113,8 +113,8 @@ fun main(args: Array<String>) {
 //    val num25 = OvertimeWork().solution(4, works)
 //    println(num25)
 
-    val num26 = LineUp().solution(3, 5)
-    printList(num26)
+//    val num26 = LineUp().solution(3, 5)
+//    printList(num26)
 
 //    val stones = intArrayOf(2, 4, 5, 3, 2, 1, 4, 1, 1, 1)
 //    val num27 = Bridge().solution(stones, 3)
@@ -122,6 +122,9 @@ fun main(args: Array<String>) {
 
 //    val num28 = N_Queen().solution(4)
 //    println(num28)
+
+    val num29 = InstallStation().solution(11, intArrayOf(1,4, 7, 9, 11),1)
+    println(num29)
 }
 
 fun printList(list: Array<IntArray>) {
