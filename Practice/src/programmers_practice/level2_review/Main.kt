@@ -6,10 +6,10 @@ fun main(args: Array<String>) {
 //    val num1 = Country124().solution(4)
 //    println(num1)
 
-    var skillTree = arrayOf("BACDE", "CBADF", "AECB", "BDA", "CXF", "ASF", "BDF", "CEFD")
-    //                         x       o         o      x      o      o      x      x
-    val num2 = SkillTree2().solution("CBD", skillTree)
-    println(num2)
+//    var skillTree = arrayOf("BACDE", "CBADF", "AECB", "BDA", "CXF", "ASF", "BDF", "CEFD")
+//    //                         x       o         o      x      o      o      x      x
+//    val num2 = SkillTree2().solution("CBD", skillTree)
+//    println(num2)
 
 //    val progresses = intArrayOf(93, 30, 55)
 //    val speeds = intArrayOf(1, 30, 5)
@@ -40,6 +40,13 @@ fun main(args: Array<String>) {
 //    val num9 = TriangleSnail().solution(5)
 //    printList(num9)
 
+//    val num10 = StockPrice().solution(intArrayOf(1, 2, 3, 2, 3))
+//    printList(num10)
+
+    val processes = intArrayOf(95, 90, 99, 99, 80, 99)
+    val speeds = intArrayOf(1,1,1,1,1,1)
+    val num11 = DevelopFunction().solution(processes, speeds)
+    printList(num11)
 }
 
 fun printList(list: IntArray) {
