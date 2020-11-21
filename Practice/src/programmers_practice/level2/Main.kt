@@ -1,7 +1,5 @@
 package programmers_practice.level2
 
-import kakao_2021_blind_1.printList
-
 fun main(args: Array<String>) {
 //    val prices = intArrayOf(1, 2, 3, 2, 3)
 //    val num1 = StockPrice().solution(prices)
@@ -57,8 +55,8 @@ fun main(args: Array<String>) {
 //    val num13 = BiggestNumber().solution(numbers)
 //    println(num13)
 
-//    val num14 = FindPrime().solution("333")
-//    println(num14)
+    val num14 = FindPrime().solution("1234")
+    println(num14)
 
 //    val citizens = intArrayOf(22, 42)
 //    val num15 = HIndex().solution(citizens)
@@ -168,6 +166,7 @@ fun main(args: Array<String>) {
 //    val num43 = SaveFileName().solution(fileName)
 //    printList(num43)
 
-    val num44 = Year2016().solution(5, 24)
-    println(num44)
+//    val num44 = Year2016().solution(5, 24)
+//    println(num44)
+
 }

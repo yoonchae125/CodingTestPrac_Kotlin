@@ -3,7 +3,7 @@ package programmers_practice.level2_review
 import programmers_practice.level2.PriceOfStock
 
 fun main(args: Array<String>) {
-//    val num1 = Country124().solution(4)
+//    val num1 = Country124_2().solution(1)
 //    println(num1)
 
 //    var skillTree = arrayOf("BACDE", "CBADF", "AECB", "BDA", "CXF", "ASF", "BDF", "CEFD")
@@ -17,15 +17,15 @@ fun main(args: Array<String>) {
 //    printList(num3)
 
 //    val truck_weights = intArrayOf(7,4,5,6)
-//    val num4 = TruckCrossingBridge().solution(2, 10 ,truck_weights)
+//    val num4 = TruckCrossingBridge2().solution(2, 10 ,truck_weights)
 //    println(num4)
 
 //    val prices = intArrayOf(1, 2, 3, 2, 3)
 //    val num5 = PriceOfStock().solution(prices)
 //    printList(num5)
 
-//    val priorities = intArrayOf(2, 1, 3, 2)
-//    val num6 = Printer().solution(priorities, 2)
+//    val priorities = intArrayOf(1, 1, 9, 1, 1, 1)
+//    val num6 = Printer2().solution(priorities, 0)
 //    println(num6)
 
 //    val num7 = ShrinkString().solution("abcabcdede")
@@ -34,7 +34,7 @@ fun main(args: Array<String>) {
 //    val picture = arrayOf(intArrayOf(1, 1, 1, 0), intArrayOf(1, 2, 2, 0),
 //            intArrayOf(1, 0, 0, 1), intArrayOf(0, 0, 0, 1),
 //            intArrayOf(0, 0, 0, 3), intArrayOf(0, 0, 0, 3))
-//    val num8 = ColoringBook().solution(6, 4, picture)
+//    val num8 = ColoringBook2().solution(6, 4, picture)
 //    printList(num8)
 
 //    val num9 = TriangleSnail().solution(5)
@@ -43,10 +43,22 @@ fun main(args: Array<String>) {
 //    val num10 = StockPrice().solution(intArrayOf(1, 2, 3, 2, 3))
 //    printList(num10)
 
-    val processes = intArrayOf(95, 90, 99, 99, 80, 99)
-    val speeds = intArrayOf(1,1,1,1,1,1)
-    val num11 = DevelopFunction().solution(processes, speeds)
-    printList(num11)
+//    val processes = intArrayOf(95, 90, 99, 99, 80, 99)
+//    val speeds = intArrayOf(1,1,1,1,1,1)
+//    val num11 = DevelopFunction().solution(processes, speeds)
+//    printList(num11)
+
+//    val num12 = BiggestNumber().solution("1924",2)
+//    println(num12)
+
+//    val num13 = Hotter().solution(intArrayOf(1, 2, 3, 9, 10, 12), 7)
+//    println(num13)
+
+//    val num14 = BiggestNum().solution(intArrayOf(3, 30, 34, 5, 9))
+//    println(num14)
+
+    val num15 = ContactList().solution(arrayOf("119", "97674223", "1195524421"))
+    println(num15)
 }
 
 fun printList(list: IntArray) {
