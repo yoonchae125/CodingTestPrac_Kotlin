@@ -57,8 +57,19 @@ fun main(args: Array<String>) {
 //    val num14 = BiggestNum().solution(intArrayOf(3, 30, 34, 5, 9))
 //    println(num14)
 
-    val num15 = ContactList().solution(arrayOf("119", "97674223", "1195524421"))
-    println(num15)
+//    val num15 = ContactList().solution(arrayOf("119", "97674223", "1195524421"))
+//    println(num15)
+
+//    val num16 = HIndex().solution(intArrayOf(3, 0, 6, 1, 5))
+//    println(num16)
+
+//    val num17 = SavingBoat().solution(intArrayOf(70, 50, 80, 50), 100)
+//    println(num17)
+
+    val clothes = arrayOf(arrayOf("yellow_hat", "headgear"), arrayOf("blue_sunglasses", "eyewea)"),
+            arrayOf("green_turban", "headgear"))
+    val num18 = Fake().solution(clothes)
+    println(num18)
 }
 
 fun printList(list: IntArray) {
