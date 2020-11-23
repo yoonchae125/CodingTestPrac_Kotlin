@@ -66,10 +66,21 @@ fun main(args: Array<String>) {
 //    val num17 = SavingBoat().solution(intArrayOf(70, 50, 80, 50), 100)
 //    println(num17)
 
-    val clothes = arrayOf(arrayOf("yellow_hat", "headgear"), arrayOf("blue_sunglasses", "eyewea)"),
-            arrayOf("green_turban", "headgear"))
-    val num18 = Fake().solution(clothes)
-    println(num18)
+//    val clothes = arrayOf(arrayOf("yellow_hat", "headgear"), arrayOf("blue_sunglasses", "eyewea)"),
+//            arrayOf("green_turban", "headgear"))
+//    val num18 = Fake().solution(clothes)
+//    println(num18)
+
+//    val num19 = Carpet().solution(10,2)
+//    printList(num19)
+
+//    val num20 = TargetNumber().solution(intArrayOf(1, 1, 1, 1, 1), 3)
+//    println(num20)
+
+    val map = arrayOf(intArrayOf(1,1,0,0),intArrayOf(1,0,0,0),
+            intArrayOf(1,0,0,1),intArrayOf(1,1,1,1))
+    val num21 = QuadZip().solution(map)
+    printList(num21)
 }
 
 fun printList(list: IntArray) {
