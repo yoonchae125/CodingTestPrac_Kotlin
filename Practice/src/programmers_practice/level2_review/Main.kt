@@ -77,10 +77,33 @@ fun main(args: Array<String>) {
 //    val num20 = TargetNumber().solution(intArrayOf(1, 1, 1, 1, 1), 3)
 //    println(num20)
 
-    val map = arrayOf(intArrayOf(1,1,0,0),intArrayOf(1,0,0,0),
-            intArrayOf(1,0,0,1),intArrayOf(1,1,1,1))
-    val num21 = QuadZip().solution(map)
-    printList(num21)
+//    val map = arrayOf(intArrayOf(1,1,0,0),intArrayOf(1,0,0,0),
+//            intArrayOf(1,0,0,1),intArrayOf(1,1,1,1))
+//    val num21 = QuadZip().solution(map)
+//    printList(num21)
+
+//    val board = arrayOf(intArrayOf(1))
+//    val num22 = BiggestSquare().solution(board)
+//    println(num22)
+
+//    val num23 = RightGualho().solution("()()")
+//    println(num23)
+
+//    val num24 = SecondBiggest().solution(78)
+//    println(num24)
+
+//    val land = arrayOf(intArrayOf(1,2,3,5),intArrayOf(5,6,7,8),intArrayOf(4,3,2,1))
+//    val num25 = GetLand().solution(land)
+//    println(num25)
+
+//    val num26 = PocketMonster().solution(intArrayOf(3,1,2,3))
+//    println(num26)
+
+//    val num27 = Finn().solution(15)
+//    println(num27)
+
+    val num28 = RepeatBinary().solution("110010101001")
+    printList(num28)
 }
 
 fun printList(list: IntArray) {
