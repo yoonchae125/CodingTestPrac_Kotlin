@@ -1,6 +1,5 @@
 package programmers_practice.level2_review
 
-import programmers_practice.level2.PriceOfStock
 
 fun main(args: Array<String>) {
 //    val num1 = Country124_2().solution(1)
@@ -102,13 +101,48 @@ fun main(args: Array<String>) {
 //    val num27 = Finn().solution(15)
 //    println(num27)
 
-    val num28 = RepeatBinary().solution("110010101001")
-    printList(num28)
+//    val num28 = RepeatBinary().solution("110010101001")
+//    printList(num28)
+
+//    val num29 = MaxAndMin().solution("1 2 3 4")
+//    println(num29)
+
+//    val A = intArrayOf(1, 4, 2)
+//    val B = intArrayOf(5, 4, 4)
+//    val num30 = MakeMin().solution(A,B)
+//    println(num30)
+
+//    val num31 = Fibonacci().solution(3)
+//    println(num31)
+
+//    val arr1 = arrayOf(intArrayOf(1, 4), intArrayOf(3, 2), intArrayOf(4, 1))
+//    val arr2 = arrayOf(intArrayOf(3, 3), intArrayOf(3, 3))
+//    val num32 = MultMatrix().solution(arr1, arr2)
+//    printList(num32)
+
+//    val num33 = JadenCaseString().solution("3people unFollowed me")
+//    println(num33)
+
+//    val num34 = RemovePair().solution("cdcd")
+//    println(num34)
+
+    val num35 = MakePrime().solution(intArrayOf(1,2,3,4))
+    println(num35)
 }
 
 fun printList(list: IntArray) {
     list.forEach {
         print("$it ")
+    }
+    println()
+}
+
+fun printList(list: Array<IntArray>) {
+    list.forEach {
+        it.forEach {
+            print("$it ")
+        }
+        println()
     }
     println()
 }
