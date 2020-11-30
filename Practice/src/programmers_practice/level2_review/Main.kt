@@ -126,8 +126,11 @@ fun main(args: Array<String>) {
 //    val num34 = RemovePair().solution("cdcd")
 //    println(num34)
 
-    val num35 = MakePrime().solution(intArrayOf(1,2,3,4))
-    println(num35)
+//    val num35 = MakePrime().solution(intArrayOf(1,2,3,4))
+//    println(num35)
+
+    val num36 = FourBlocks().solution(4, 5, arrayOf("CCBDE", "AAADE", "AAABF", "CCBBF"))
+    println(num36)
 }
 
 fun printList(list: IntArray) {
