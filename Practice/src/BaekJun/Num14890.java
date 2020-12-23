@@ -18,7 +18,6 @@ public class Num14890 {
 
         int ans = 0;
 
-
         for (int i = 0; i < N; i++) {
             int len = 0;
             int prev = -1;
@@ -32,8 +31,6 @@ public class Num14890 {
                     flag = false;
                     break;
                 } else if(now-prev == 1){
-//                    System.out.println("bigger"+i+", "+j);
-//                    System.out.println("len: "+len);
                     if(len<L){
                         flag = false;
                         break;
@@ -41,7 +38,6 @@ public class Num14890 {
                     len = 1;
                 } else if(prev-now==1){
                     // 뒤에 now랑 같은 높이 같이 L개 있는지
-//                    System.out.println("smaller"+i+", "+j);
                     for(int k=j+1;k<j+L;k++){
                         if(k>=N || map[i][k]!=now){
                             flag = false;
@@ -49,15 +45,11 @@ public class Num14890 {
                         }
                     }
                     len = L*-1+1;
-//                    System.out.println("len: "+len);
                 }
-//                System.out.println(len);
                 prev = now;
             }
             if (flag) {
                 ans++;
-            }else{
-//                System.out.println("no "+i);
             }
         }
 
@@ -94,8 +86,6 @@ public class Num14890 {
             }
             if (flag) {
                 ans++;
-            }else{
-//                System.out.println("no "+i);
             }
         }
         System.out.println(ans);
