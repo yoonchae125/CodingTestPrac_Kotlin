@@ -1,6 +1,5 @@
 package line_2020
 
-import kakao_2021_blind_1.printList
 
 fun main(args: Array<String>){
 //    val boxes = arrayOf(intArrayOf(1, 2), intArrayOf(2, 1), intArrayOf(3, 3), intArrayOf(4, 5),
