@@ -46,7 +46,7 @@ public class Num19237 {
                     System.out.print(map[i][j]+" ");
                 }System.out.println();
             }System.out.println();
-            
+
             if (!isLeft(map)) break;
             int[][] map2 = new int[N][N];
             for (int i = 0; i < N; i++) {
