@@ -3,94 +3,91 @@ package programmers_practice.kakao2021blind;
 import java.util.*;
 
 public class MenuRenewal {
-    static HashMap<String, Integer> map = new HashMap<>();
+    static HashMap<String, Integer>[] map;
 
     public static String[] solution(String[] orders, int[] course) {
 
-
+        map = new HashMap[course.length];
+        for (int i = 0; i < course.length; i++) {
+            map[i] = new HashMap<>();
+        }
         for (String order : orders) {
-            makeSet(order, 0, new ArrayList<Character>());
+            makeSet(order, 0, new ArrayList<Character>(), course);
         }
         ArrayList<String> ans = new ArrayList<>();
 
-        String[] keys = new String[map.size()];
-        map.keySet().toArray(keys);
-        Arrays.sort(keys, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                Integer n1 = map.get(o1);
-                Integer n2 = map.get(o2);
-                if(o1.length() == o2.length()){
-                    if(n1.compareTo(n2) == 0){
-                        return o1.compareTo(o2);
-                    }else {
-                        return n2.compareTo(n1);
+        for (int i = 0; i < course.length; i++) {
+            if (map[i].size() == 0) continue;
+            String[] keys = new String[map[i].size()];
+            map[i].keySet().toArray(keys);
+            int idx = i;
+            Arrays.sort(keys, new Comparator<String>() {
+                @Override
+                public int compare(String o1, String o2) {
+                    Integer n1 = map[idx].get(o1);
+                    Integer n2 = map[idx].get(o2);
+                    if (o1.length() == o2.length()) {
+                        if (n1.compareTo(n2) == 0) {
+                            return o1.compareTo(o2);
+                        } else {
+                            return n2.compareTo(n1);
+                        }
+                    } else {
+                        return o1.length() - o2.length();
                     }
-                }else {
-                    return  o1.length() - o2.length() ;
                 }
-            }
-        });
-        int idx = 0;
-        int count = -1;
-        for(String key:keys){
-            System.out.println(key+" "+map.get(key));
-            if(idx==course.length) break;
-            if(map.get(key)<2) continue;
-            int len = key.length();
-            int n = course[idx];
-            int value = map.get(key);
-//            System.out.println(len+" "+n);
-            if(n==len){
-                if(count==-1){
+            });
+            int max = map[i].get(keys[0]);
+            if (max < 2) continue;
+            for (String key : keys) {
+                if (map[i].get(key) == max) {
                     ans.add(key);
-                    count = value;
-                }else {
-                    if(count==value){
-                        ans.add(key);
-                    }else {
-                        idx++;
-                        count = -1;
-                    }
+                } else {
+                    break;
                 }
-            }else{
-                count = -1;
-                if(len<idx)
-                    idx++;
             }
-
         }
+
         Collections.sort(ans);
         String[] answer = new String[ans.size()];
-        for(int i=0;i<ans.size();i++){
+        for (int i = 0; i < ans.size(); i++) {
             answer[i] = ans.get(i);
         }
         return answer;
     }
 
-    static void makeSet(String order, int idx, ArrayList<Character> list) {
+    static void makeSet(String order, int idx, ArrayList<Character> list, int[] course) {
         if (idx == order.length()) {
             if (list.size() >= 2) {
-                Collections.sort(list);
-                StringBuilder course = new StringBuilder();
-                for (char c : list) {
-                    course.append(c);
+//                boolean flag = false;
+                int courseIdx = -1;
+                for (int i = 0; i < course.length; i++) {
+                    if (list.size() == course[i]) {
+                        courseIdx = i;
+                        break;
+                    }
                 }
-                System.out.println(course.toString());
-                if (map.containsKey(course.toString())) {
-                    map.replace(course.toString(), map.get(course.toString()) + 1);
+                if (courseIdx == -1)
+                    return;
+                Collections.sort(list);
+                StringBuilder courses = new StringBuilder();
+                for (char c : list) {
+                    courses.append(c);
+                }
+
+                if (map[courseIdx].containsKey(courses.toString())) {
+                    map[courseIdx].replace(courses.toString(), map[courseIdx].get(courses.toString()) + 1);
 
                 } else {
-                    map.put(course.toString(), 1);
+                    map[courseIdx].put(courses.toString(), 1);
                 }
             }
             return;
         }
         ArrayList<Character> list1 = (ArrayList<Character>) list.clone();
         list1.add(order.charAt(idx));
-        makeSet(order, idx + 1, list1);
-//        list.remove(list.size() - 1);
-        makeSet(order, idx + 1, (ArrayList<Character>) list.clone());
+        makeSet(order, idx + 1, list1, course);
+        makeSet(order, idx + 1, (ArrayList<Character>) list.clone(), course);
     }
 
     public static void main(String[] args) {
